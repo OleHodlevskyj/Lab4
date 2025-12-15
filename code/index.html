@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Patterns Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .pattern-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pattern-card h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .pattern-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .console-output {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Породжуючі патерни проектування</h1>
+    
+    <div class="info">
+        <strong>Інструкція:</strong> Відкрийте консоль браузера (F12) для перегляду результатів роботи патернів.
+    </div>
+
+    <div class="pattern-card">
+        <h2>1. Singleton (Одинак)</h2>
+        <p>Гарантує, що клас має лише один екземпляр, та надає глобальну точку доступу до нього.</p>
+    </div>
+
+    <div class="pattern-card">
+        <h2>2. Factory Method (Фабричний метод)</h2>
+        <p>Визначає інтерфейс для створення об'єкта, але залишає підкласам рішення про те, який клас інстанціювати.</p>
+    </div>
+
+    <div class="pattern-card">
+        <h2>3. Abstract Factory (Абстрактна фабрика)</h2>
+        <p>Надає інтерфейс для створення сімейств пов'язаних або залежних об'єктів без вказівки їх конкретних класів.</p>
+    </div>
+
+    <div class="pattern-card">
+        <h2>4. Builder (Будівельник)</h2>
+        <p>Відокремлює конструювання складного об'єкта від його представлення, дозволяючи одному процесу створювати різні представлення.</p>
+    </div>
+
+    <div class="pattern-card">
+        <h2>5. Prototype (Прототип)</h2>
+        <p>Створює нові об'єкти шляхом клонування існуючого об'єкта-прототипу.</p>
+    </div>
+
+    <script type="module">
+        import './singleton/demo.js';
+        
+        import './factory/demo.js';
+
+        import './abstractFactory/demo.js';
+
+        import './builder/demo.js';
+
+        import './prototype/demo.js';
+
+        console.log('%c\n=================================', 'color: #3498db; font-weight: bold');
+        console.log('%c  ДЕМОНСТРАЦІЯ ЗАВЕРШЕНА', 'color: #3498db; font-weight: bold');
+        console.log('%c=================================', 'color: #3498db; font-weight: bold');
+    </script>
+</body>
+</html>
